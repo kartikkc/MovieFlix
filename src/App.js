@@ -10,11 +10,12 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState('');
   const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
+    const response = await fetch(API_URL+"?s="+title)
     const data = await response.json();
     setMovies(data.Search);
     setSearch()
   }
+  console.log(movies);
   useEffect(() => {
     searchMovies('The Proposal');
   }, [])
