@@ -16,7 +16,7 @@ function App() {
     setSearch()
   }
   useEffect(() => {
-    searchMovies('Lift');
+    searchMovies('The Proposal');
   }, [])
   return (
     <div className="app">
